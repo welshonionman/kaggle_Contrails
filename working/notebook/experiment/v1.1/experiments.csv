@@ -1,0 +1,26 @@
+No.,dice,memo
+01,0.6489,(base)
+02,0.6284,-augmentations
+03,0.6496,-RandomRotate90
+04,0.6463,-RandomBrightnessContrast
+05,0.6519,-ShiftScaleRotate
+06,0.6536,-GridDistortion
+07,0.6488,-CoarseDropout
+08,0.6518,-RandomGridShuffle
+09,0.000,+resize
+10,0.6583,:Unet++
+11,0.6324,+HorizontalFlip
+12,0.6430,+ChannelShuffle
+13,0.6478,baseline-ShiftScaleRotate GridDistortion RandomGridShuffle
+14,0.6542,baseline-ShiftScaleRotate GridDistortion
+15,0.6532,baseline-ShiftScaleRotate RandomGridShuffle
+16,0.6499,baseline-GridDistortion RandomGridShuffle
+17,0.0000,14:resnext50_32x4d
+18,0.0000,14:timm-res2net50_48w_2s
+19,0.6401,14:timm-regnetx_064
+20,0.0000,14:se_resnet50
+21,0.0000,14:timm-skresnext50_32x4d
+22,0.6528,14:efficientnet-b5
+23,0.6644,14:efficientnet-b7 Unet++
+24,0.6644,14:timm-efficientnet-b8 Unet++
+25,0.6593,14:efficientnet-b7

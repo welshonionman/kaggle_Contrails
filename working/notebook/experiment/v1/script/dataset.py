@@ -61,7 +61,7 @@ class ContrailsDataset(Dataset):
         row = self.df.iloc[index]
         path = row.path
         record_id = row.record_id
-        npy = fastnumpyio.load(str(path))
+        npy = fastnumpyio.load(str(path)).astype("float32")
 
         if self.mode == 'train':
             image = npy[..., :-1]
@@ -87,19 +87,25 @@ class ContrailsDataset(Dataset):
 
 def show_dataset(idx, dataset):
     image, label = dataset[idx]
-    times = image.shape[0]//3
-    fig, axes = plt.subplots(nrows=2, ncols=4, figsize=(40, 18))
+
+    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(10, 4))
     axes = axes.flatten()
     fig.tight_layout(pad=0.1)
+    axes[0].imshow(image.permute(1, 2, 0).to(torch.float))
+    axes[0].axis('off')
+    axes[1].imshow(label.permute(1, 2, 0).to(torch.float))
+    axes[1].axis('off')
 
-    for time in range(times):
+    # times = image.shape[0]//3
+    # fig, axes = plt.subplots(nrows=2, ncols=4, figsize=(40, 18))
+    # axes = axes.flatten()
+    # fig.tight_layout(pad=0.1)
 
-        axes[time].imshow(image[time::times, :, :].permute(1, 2, 0).to(torch.float))
-        axes[time].axis('off')
+    # for time in range(times):
 
-    plt.figure()
-    plt.imshow(label.permute(1, 2, 0).to(torch.float))
-    plt.axis('off')
+    #     axes[time].imshow(image[time::times, :, :].permute(1, 2, 0).to(torch.float))
+    #     axes[time].axis('off')
 
-    plt.figure()
-    plt.hist(image.flatten(), bins=100)
+    # plt.figure()
+    # plt.imshow(label.permute(1, 2, 0).to(torch.float))
+    # plt.axis('off')

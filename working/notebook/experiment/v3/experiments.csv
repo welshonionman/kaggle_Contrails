@@ -1,0 +1,15 @@
+No.,CV,LB,memo
+01,0.6812,,,model1_iter1_fold0 Unet resnest200e
+02,0.6777,,,model1_iter1_fold1 Unet resnest200e
+03,0.6800,,,model1_iter2_fold0 Unet resnest200e
+04,0.6804,,,model1_iter2_fold1 Unet resnest200e
+05,0.6792,,,model1_iter2_fold2 Unet resnest200e
+03,0.6804,,,model1_iter3_fold0 Unet resnest200e
+04,0.6829,,,model1_iter3_fold1 Unet resnest200e
+05,0.6790,,,model1_iter3_fold2 Unet resnest200e
+05,0.6743,,,model2_iter1_fold0 UnetPlusPlus resnest101e
+06,0.6729,,,model2_iter1_fold1 UnetPlusPlus resnest101e
+07,0.6740,,,model2_iter1_fold2 UnetPlusPlus resnest101e
+08,0.6781,,,model3_iter1_fold0 UnetPlusPlus efficientnet-b7
+09,0.6756,,,model3_iter1_fold1 UnetPlusPlus efficientnet-b7
+10,0.6773,,,model3_iter1_fold2 UnetPlusPlus efficientnet-b7

@@ -1,0 +1,11 @@
+code --install-extension ms-python.python
+code --install-extension ms-python.isort
+code --install-extension ms-python.flake8
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-toolsai.jupyter-keymap
+code --install-extension mechatroner.rainbow-csv
+code --install-extension eamodio.gitlens
+code --install-extension mhutchie.git-graph
+code --install-extension usernamehw.errorlens
+code --install-extension christian-kohler.path-intellisense
+code --install-extension GitHub.copilot
